@@ -1,0 +1,42 @@
+<div class="card mt-5">
+  <div class="card-body">
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+          <!-- TO UPDATE -->
+          <input type="hidden" name="$key" >
+
+          <div class="form-group">
+            <input 
+              type="text"
+              class="form-control"
+              name="monto"
+              [(ngModel)]="monto" 
+              placeholder="Agregar Monto"
+              >
+          </div>
+          <div class="form-group">
+              <input 
+                type="text"
+                class="form-control"
+                name="monedaOrigen"
+                [(ngModel)]="monedaOrigen"
+                placeholder="Moneda Origen"
+                >
+            </div>
+          <div class="form-group">
+            <input 
+              type="text"
+              class="form-control"
+              name="monedaDestino"
+              [(ngModel)]="monedaDestino"
+              placeholder="Moneda Destino"
+              >
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-secondary" type="reset" (click)="insertForm()">
+                <i class="fas fa-sync-alt"></i> Cambiar
+            </button>
+          </div>
+        </form>
+  </div>
+</div>

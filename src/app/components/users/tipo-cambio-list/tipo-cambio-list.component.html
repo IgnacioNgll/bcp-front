@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-body">
+    <h6 class="text-center">
+      Lista de Edades
+    </h6>
+    <table class="table table-sm table-hover">
+      <tbody>
+        <tr >
+          <td>Monto</td>
+          <td>Monto con tipo de cambio</td>
+          <td>Moneda origen</td>
+          <td>Moneda destino</td>
+          <td>Tipo de cambio</td>
+        </tr>
+        <tr *ngFor="let list of listaData">
+          <td>{{list.data.amount}}</td>
+          <td>{{list.data.amountResult}}</td>
+          <td>{{list.data.origin}}</td>
+          <td>{{list.data.destination}}</td>
+          <td>{{list.data.value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
